@@ -1,11 +1,9 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
+﻿using UnityEngine;
+using System.Collections;
 // Remember, the following line is needed to use Lists
-
-public class ProjectileLine : MonoBehaviour {
-
+using System.Collections.Generic;
+public class ProjectileLine : MonoBehaviour
+{
     static public ProjectileLine S; // Singleton
                                     // fields set in the Unity Inspector pane
     public float minDist = 0.1f;
@@ -67,7 +65,7 @@ public class ProjectileLine : MonoBehaviour {
             // ...it adds an extra bit of line to aid aiming later
             points.Add(pt + launchPosDiff);
             points.Add(pt);
-            line.SetVertexCount(2);
+            line.positionCount = 2;
             // Sets the first two points
             line.SetPosition(0, points[0]);
             line.SetPosition(1, points[1]);
@@ -78,7 +76,7 @@ public class ProjectileLine : MonoBehaviour {
         {
             // Normal behavior of adding a point
             points.Add(pt);
-            line.SetVertexCount(points.Count);
+            line.positionCount = points.Count;
             line.SetPosition(points.Count - 1, lastPoint);
             line.enabled = true;
         }

@@ -947,6 +947,22 @@ MonoBehaviour:
   _____________________________: 0
   poi: {fileID: 0}
   camZ: 0
+--- !u!1 &1652159945 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1778182984227202, guid: 8b249b71a014a8841ad9b68c213aa985,
+    type: 2}
+  m_PrefabInternal: {fileID: 963304976}
+--- !u!114 &1652159950
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1652159945}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e3e168f418ec5d418cecf1e2cadfb46, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1665489582
 GameObject:
   m_ObjectHideFlags: 0
@@ -1103,6 +1119,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1764701859}
   - component: {fileID: 1764701858}
+  - component: {fileID: 1764701857}
   m_Layer: 0
   m_Name: ProjectileLine
   m_TagString: Untagged
@@ -1110,6 +1127,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &1764701857
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1764701856}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44edd887cd23ebd4ba3814b8d829d621, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minDist: 0.1
+  _____________________________: 0
+  line: {fileID: 0}
+  points: []
 --- !u!120 &1764701858
 LineRenderer:
   m_ObjectHideFlags: 0
@@ -1125,7 +1157,7 @@ LineRenderer:
   m_ReflectionProbeUsage: 0
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: 1f57f7460543d4f4f9d904fe0963d933, type: 2}
+  - {fileID: 2100000, guid: 2e46a2c1e8d9b5441a01767d29131793, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1150,7 +1182,7 @@ LineRenderer:
   - {x: 0, y: 0, z: 1}
   m_Parameters:
     serializedVersion: 2
-    widthMultiplier: 0.25
+    widthMultiplier: 1
     widthCurve:
       serializedVersion: 2
       m_Curve:
@@ -1168,8 +1200,8 @@ LineRenderer:
       m_RotationOrder: 4
     colorGradient:
       serializedVersion: 2
-      key0: {r: 0.9338235, g: 0.50124353, b: 0.9218904, a: 1}
-      key1: {r: 0.9338235, g: 0.50124353, b: 0.9218904, a: 1}
+      key0: {r: 1, g: 1, b: 1, a: 1}
+      key1: {r: 1, g: 1, b: 1, a: 1}
       key2: {r: 0, g: 0, b: 0, a: 0}
       key3: {r: 0, g: 0, b: 0, a: 0}
       key4: {r: 0, g: 0, b: 0, a: 0}
@@ -1192,7 +1224,7 @@ LineRenderer:
       atime5: 0
       atime6: 0
       atime7: 0
-      m_Mode: 0
+      m_Mode: 1
       m_NumColorKeys: 2
       m_NumAlphaKeys: 2
     numCornerVertices: 0
